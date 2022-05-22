@@ -15,6 +15,7 @@
     max-height: 150px;
     width: auto;
     height: auto;
+    object-fit: scale-down;
 }
 
 .image-container {
@@ -22,6 +23,8 @@
     padding: 5%;
     height: 200px;
     margin: 10%;
+    justify-content: center;
+    display: flex;
 }
 
 .image-flash {
@@ -40,4 +43,9 @@
 .post-link:hover,
 .page-link {
     color: #FFB30F;
+}
+
+.card-container {
+    outline: 2px solid #507DBC;
+    outline-offset: -10px;
 }
