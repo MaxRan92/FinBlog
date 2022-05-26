@@ -1,11 +1,10 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Comment, Asset
 from django_summernote.admin import SummernoteModelAdmin
 
-
-@admin.register(Post)
-class PostAdmin(SummernoteModelAdmin):
-    # add the post models to the admin panel
+@admin.register(Asset)
+class AssetAdmin(SummernoteModelAdmin):
+    # add the asset models to the admin panel
     # apply summernote to the content text field
     # prepopulate slug with title, add filter, listdisplay, search functionality
 
@@ -18,7 +17,7 @@ class PostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'post', 'created_on', 'approved')
+    list_display = ('name', 'body', 'asset', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
     actions = ['approve_comments']
