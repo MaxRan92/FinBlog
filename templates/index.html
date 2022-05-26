@@ -8,23 +8,23 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in post_list %}
+                {% for asset in asset_list %}
                 <div class="div col-md-3 card-container">
                     <div class="div card mb-3">
                         <div class="div card-body">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
+                                {% if "placeholder" in asset.featured_image.url %}
                                 <img class="card-img-top" src="https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?202205200410">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ asset.featured_image.url }}">
                                 {% endif %}
                             </div>
-                            <a href="{% url 'asset_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                            <a href="{% url 'asset_detail' asset.slug %}" class="post-link">
+                                <h2 class="card-title">{{ asset.title }}</h2>
+                                <p class="card-text">{{ asset.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}</p>
+                            <p class="card-text text-muted h6">{{ asset.created_on}}</p>
                         </div>
                     </div>
                 </div>
