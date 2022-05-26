@@ -16,9 +16,10 @@
             <div class="col-md-4">
                 
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }} ({{ post.ticker }})</h1>
+                <h1 class="asset-title">{{ post.title }} ({{ post.ticker }})</h1>
             </div>
             <div class="col-md-8">
+                <p>{{ post.content | safe }}</p>
             </div>
         </div>
     </div>

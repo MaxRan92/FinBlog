@@ -80,6 +80,9 @@ body {
     object-fit: scale-down;
 }
 
+.asset-title {
+    margin-top: 25px;
+}
 
 /* Footer */
 
